@@ -1,8 +1,9 @@
- <?php if ($result): ?>
+<?php if ($result): ?>
     <div class="pure-g typecho-list">
         <?php foreach ($result->packages as $plugin): ?>
         <div class="pure-u-1-4 as-card" data-name="<?php echo $plugin->name; ?>" data-existed="<?php echo $plugin->existed ?>">
             <h3><?php echo $plugin->name; ?></h3>
+			
             <p class="as-description" title="<?php echo $plugin->versions[0]->description; ?>">
                 <?php echo $plugin->versions[0]->description; ?>
             </p>
@@ -18,6 +19,9 @@
                         <option value="<?php echo $version->version; ?>" data-activated="<?php echo $version->activated; ?>" data-author="<?php echo $version->author; ?>" data-require="<?php echo $version->require; ?>" data-description="<?php echo $version->description; ?>"><?php echo $version->version; ?></option>
                     <?php endforeach; ?>
                 </select>
+				<? if($plugin->versions[0]->link){?>
+					<a href="<?php echo $plugin->versions[0]->link; ?>" target="_blank">Link</a>
+				<?}?>
             </p>
 
             <p class="as-require">

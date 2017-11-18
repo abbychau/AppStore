@@ -25,6 +25,20 @@
     .as-status i.active {
         color: green
     }
+	 .as-card{
+	     background: #EFEFEF;
+    border: 1px solid #CCC;
+	border-radius:3px;
+    width: 23%;
+    margin: .1em;
+    padding: .2em;
+	
+ }
+ .as-card p{
+	margin:.5em
+ }
+ .as-card h3{margin:.5em}
+ 
 </style>
 
 <?php if ($typechoVersion <= 0.8): ?>
@@ -35,7 +49,7 @@
                     <h2><?php echo $menu->title; ?> <small><cite>The missing plugins' store for Typecho</cite></small></h2>
                     <p> 
                         <i class="fa fa-heart" title="<?php echo _t('提建议/吐槽专用'); ?>"></i>
-                        <a href="http://chekun.me/typecho-app-store.html" target="_blank"><?php echo _t('提建议/吐槽专用'); ?></a>
+                        <a href="https://chekun.me/typecho/" target="_blank"><?php echo _t('提建议/吐槽专用'); ?></a>
                     </p>
                 </div>
             </div>
@@ -52,12 +66,12 @@
                     <h2>
                         <?php echo $menu->title; ?> <small><cite>The missing plugins' store for Typecho</cite></small>
                         <p style="float:right"> 
-                            <a href="http://chekun.me/typecho-app-store.html" target="_blank"><i class="fa fa-heart" title="<?php echo _t('提建议/吐槽专用'); ?>"></i><?php echo _t('提建议/吐槽专用'); ?></a>
+                            <a href="https://chekun.me/typecho/" target="_blank"><i class="fa fa-heart" title="<?php echo _t('提建议/吐槽专用'); ?>"></i><?php echo _t('提建议/吐槽专用'); ?></a>
                         </p>
                     </h2>
                 </div>
             </div>
-            <div class="colgroup typecho-page-main" role="main">
+            <div class="colgroup typecho-page-main" role="main" style="clear:both">
                 <?php include 'list.php'; ?>
             </div>
         </div>
